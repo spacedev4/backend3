@@ -1,0 +1,59 @@
+-- 1 vazifa
+
+INSERT INTO books (title,author,year,price)
+VALUES
+	("HTML","human",2026,"10$"),
+	("CSS","human2",2026,"15$"),
+	("JS","human3",2026,"20$"),
+	("python","human4",2026,"25$"),
+	("SQLite","human5",2026,"30$");
+	
+SELECT * FROM books;
+
+-- 2 vazifa
+
+INSERT INTO studentss (name,age,major,gpa)
+VALUES
+	("Vali",18,"IT",180),
+	("Ali",17,"Software enginer",170),
+	("Bali",20,"Backend enginer",189),
+	("Kali",18,"cyber security",167),
+	("Linuz",19,"OS Developer",200);
+	
+SELECT * FROM studentss;
+
+-- 3 vazifa
+
+INSERT INTO products (name, category, quantity, price)
+VALUES
+	('Noutbuk', 'Elektronika', 10, 8000000.00),
+	('Telefon', 'Elektronika', 20, 3000000.00),
+	('Stol', 'Mebel', 5, 500000.00),
+	('Stul', 'Mebel', 15, 150000.00),
+	('Kitob', 'Kanselyariya', 50, 50000.00);
+	
+SELECT * FROM products;
+
+-- 4 vazifa
+
+INSERT INTO orders (customer_name, product_name, quantity, order_date)
+VALUES
+	('Ali', 'Noutbuk', 1, '2023-10-01'),
+	('Vali', 'Telefon', 2, '2023-10-02'),
+	('Sami', 'Stol', 1, '2023-10-03'),
+	('Guli', 'Stul', 4, '2023-10-04'),
+	('Zari', 'Kitob', 3, '2023-10-05');
+	
+SELECT * FROM orders;
+
+-- 5 vazifa
+
+INSERT INTO movies (title, genre, release_year, rating)
+VALUES
+	('Inception', 'Sci-Fi', 2010, 8.8),
+	('Interstellar', 'Sci-Fi', 2014, 8.6),
+	('Parasite', 'Drama', 2019, 8.5),
+	('Avengers', 'Action', 2012, 8.0),
+	('Titanic', 'Romance', 1997, 7.9);
+	
+SELECT * FROM movies;
