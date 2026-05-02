@@ -1,0 +1,48 @@
+-- SELECT * FROM employees
+-- ORDER BY salary DESC
+
+
+-- SELECT * FROM employees
+-- WHERE salary BETWEEN 3000 and 6000
+-- ORDER BY salary
+
+
+-- SELECT * FROM employees
+-- WHERE salary IN (3000,6000)
+-- ORDER BY salary
+
+
+-- SELECT * FROM employees
+-- WHERE first_name LIKE 'sa%'
+
+
+-- SELECT * FROM employees
+-- ORDER BY first_name
+
+
+-- SELECT * FROM employees
+-- ORDER BY first_name
+-- LIMIT 10
+
+
+-- SELECT * FROM employees
+-- ORDER BY first_name
+-- LIMIT 10
+-- OFFSET 5
+
+
+-- SELECT avg(salary) FROM employees
+
+
+-- SELECT sum(salary) FROM employees
+
+
+-- SELECT count(*) FROM employees
+
+
+-- SELECT min(salary) FROM employees
+
+
+-- SELECT max(salary) FROM employees
+
+

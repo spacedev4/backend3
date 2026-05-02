@@ -1,0 +1,141 @@
+--- 1 vazifa ---
+
+INSERT INTO cityy(city,country,postcode)
+VALUES
+	("Tashkent","Uzbekistan",01),
+	("Moskov","Russia",195),
+	("Berlin","Germany",10),
+	("Parij","France",750),
+	("Krim","Ukraine",02),
+	("Texas","USA",980),
+	("Washington","USA",890),
+	("New texas","USA",789),
+	("Californiya","USA",678),
+	("OHIO","USA",567);
+	
+SELECT * FROM cityy 
+WHERE country = 'USA';
+
+--- 2 vazifa ---
+
+INSERT INTO books (name,author,category,price)
+VALUES
+	("iron man 1","Marvel","Fantastic",20),
+	("iron man 2","Marvel","Fantastic",25),
+	("iron man 3","Marvel","Fantastic",30),
+	("spider man 1","Marvel","Fantastic",30),
+	("spider man 2","Marvel","Fantastic",35),
+	("spider man 3","Marvel","Fantastic",40),
+	("Dead pul","Marvvel","Fantastic",20),
+	("Akuamen","DC","Fantastic",30),
+	("Flash","DC","Fantastic",30);
+	
+SELECT * FROM books
+WHERE author = "DC";	
+
+--- 3 vazifa ---
+
+INSERT INTO user (first_name,last_name,age)
+VALUES
+	("Vali","Valiyev",25),
+	("Ali","Aliyev",25),
+	("Bali","Baliyev",18),
+	("Kali","Kaliyev",32);
+
+
+SELECT * FROM user 
+WHERE age = 25;
+
+SELECT first_name, age FROM user 
+WHERE age = 25;
+
+SELECT first_name, last_name FROM user 
+WHERE id = 3;
+
+--- 4 vazifa ---
+
+-- SELECT avg(price) FROM books
+
+-- SELECT avg(price) FROM books
+-- WHERE author = "DC"
+
+-- SELECT avg(price) FROM books
+-- WHERE category = "Fantastic"
+
+-- SELECT avg(price) FROM books
+-- WHERE category = "Fantastic" AND author = "Marvel"
+
+-- SELECT avg(postcode) FROM cityy
+
+-- SELECT avg(postcode) FROM cityy
+-- WHERE country = "USA"
+
+--- 5 vazifa ---
+
+-- SELECT sum(price) FROM books
+
+-- SELECT sum(price) FROM books
+-- WHERE author = "Marvel"
+
+-- SELECT sum(price) FROM books
+-- WHERE category = "Fantastic"
+
+-- SELECT sum(price) FROM books
+-- WHERE category = "Fantastic" AND author = "DC"
+
+--- 6 vazifa ---
+
+-- SELECT * FROM cityy
+-- WHERE country = "USA"
+-- LIMIT 2
+
+-- SELECT id FROM cityy
+-- WHERE id>4
+-- LIMIT 2
+-- OFFSET 1
+
+-- SELECT * FROM cityy
+-- WHERE postcode < 123456
+-- LIMIT 5
+
+-- SELECT * FROM cityy
+-- WHERE country = "USA"
+-- LIMIT 1
+-- OFFSET 2
+
+-- SELECT * FROM books
+-- WHERE category = "Fantastic"
+-- LIMIT 4
+-- OFFSET 3
+
+-- SELECT * FROM books
+-- WHERE author = "Marvel"
+-- LIMIT 6
+
+-- SELECT * FROM books
+-- ORDER BY price ASC
+-- LIMIT 5
+
+-- SELECT * FROM books
+-- ORDER BY price DESC
+-- LIMIT 3
+
+-- SELECT * FROM books
+-- ORDER BY price DESC
+-- LIMIT 7
+-- OFFSET 3
+
+-- SELECT min(salary) FROM employees
+
+-- SELECT max(salary) FROM employees
+
+-- SELECT * FROM employees
+-- ORDER BY salary DESC
+-- LIMIT 5
+
+-- SELECT * FROM countries
+-- WHERE region_id = 4
+-- ORDER BY country_name ASC;
+
+SELECT * FROM countries
+ORDER BY region_id ASC, country_name ASC;
