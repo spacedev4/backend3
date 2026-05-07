@@ -1,0 +1,68 @@
+	-- SELECT first_name, last_name FROM students 
+-- WHERE first_name REGEXP '^[AEIOUaeiou]'
+-- UNION
+-- SELECT first_name, last_name FROM teachers 
+-- WHERE first_name REGEXP '^[AEIOUaeiou]';
+
+-- SELECT first_name, last_name FROM students
+-- UNION
+-- SELECT first_name, last_name FROM teachers
+-- ORDER BY last_name ASC, last_name ASC;
+
+-- SELECT first_name, last_name, 'Talaba' AS manba FROM students
+-- UNION
+-- SELECT first_name, last_name, 'O`qituvchi' AS manba FROM teachers
+-- ORDER BY manba, last_name;
+
+-- SELECT id, first_name, last_name FROM (
+--     SELECT id, first_name, last_name
+--     FROM students
+--     ORDER BY id DESC
+--     LIMIT 3
+-- ) AS top_students
+-- UNION
+-- SELECT id, first_name, last_name FROM (
+--     SELECT id, first_name, last_name
+--     FROM teachers
+--     ORDER BY id DESC
+--     LIMIT 3
+-- ) AS top_teachers
+-- ORDER BY id DESC;
+
+-- SELECT product_name, quantity FROM orders
+-- INTERSECT
+-- SELECT product_name, quantity FROM shipments;
+
+-- SELECT product, quantity FROM orders
+-- WHERE quantity > 5;
+-- INTERSECT
+-- SELECT product, quantity FROM shipments
+-- WHERE quantity > 5;
+
+-- SELECT order_id FROM orders;
+-- INTERSECT 
+-- SELECT order_id FROM shipments;
+
+-- SELECT shipment_id FROM shipments;
+-- INTERSECT
+-- SELECT order_id FROM orders;
+-- ORDER BY product;
+
+-- SELECT product FROM orders
+-- EXCEPT
+-- SELECT product FROM shipments;
+
+-- SELECT product FROM shipments
+-- EXCEPT
+-- SELECT product FROM orders
+-- ORDER BY product ASC;
+
+-- SELECT order_id FROM orders
+-- WHERE quantity > 10
+-- EXCEPT
+-- SELECT shipment_id FROM shipments;
+
+-- SELECT shipment_id FROM shipments 
+-- WHERE quantity < 5
+-- EXCEPT 
+-- SELECT order_id FROM orders;

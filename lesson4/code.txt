@@ -1,0 +1,100 @@
+-- CREATE TABLE students (
+-- 	id INTEGER PRIMARY KEY,
+-- 	first_name TEXT NOT NULL,
+-- 	last_name TEXT NOT NULL
+-- );
+-- 
+-- CREATE TABLE teachers (
+-- 	id INTEGER PRIMARY KEY,
+-- 	first_name TEXT NOT NULL,
+-- 	last_name TEXT NOT NULL
+-- );
+-- 
+-- INSERT INTO students (id, first_name, last_name) VALUES
+-- (1, "Alice", "Asams"),
+-- (2, "Bob", "Baker"),
+-- (3, "Carol", "Carter"),
+-- (4, "David", "Diar"),
+-- (5, "Eve", "Evans");
+--
+--
+-- INSERT INTO teachers (id, first_name, last_name) VALUES
+-- (1, "Frank", "Fisher"),
+-- (2, "Grace", "Griffin"),
+-- (3, "Henry", "Harryson"),
+-- (4, "Irene", "Ingram"),
+-- (5, "Jack", "Anderey");
+
+-- SELECT first_name, last_name
+-- FROM students
+-- UNION
+-- SELECT first_name, last_name
+-- FROM teachers
+-- 
+-- SELECT first_name, last_name
+-- FROM students
+-- WHERE last_name LIKE 'A%';
+-- UNION
+-- SELECT first_name, last_name
+-- FROM teachers
+-- WHERE last_name LIKE 'A%';
+-- 
+-- SELECT first_name, last_name
+-- FROM students
+-- UNION
+-- SELECT first_name, last_name
+-- FROM teachers
+-- ORDER BY first_name;
+-- 
+-- SELECT first_name, last_name
+-- FROM (
+-- 	SELECT id, first_name, last_name
+-- 	FROM students
+-- 	ORDER BY id
+-- 	LIMIT 5
+-- )
+-- UNION
+-- SELECT first_name, last_name
+-- FROM (
+-- 	SELECT id, first_name, last_name
+-- 	FROM teachers
+-- 	ORDER BY id
+-- 	LIMIT 3
+-- )
+-- 
+-- CREATE TABLE orders (
+-- 	order_id INTEGER PRIMARY KEY,
+-- 	product TEXT NOT NULL,
+-- 	quantity INTEGER NOT NULL
+-- );
+-- CREATE TABLE shipments (
+-- 	shipment_id INTEGER PRIMARY KEY,
+-- 	product TEXT NOT NULL,
+-- 	quantity INTEGER NOT NULL
+-- );
+-- 
+-- INSERT INTO orders (order_id, product, quantity) VALUES
+-- 	(1, "Laptop",5),
+-- 	(2, "Keyboard",10),
+-- 	(3, "Mouse",15),
+-- 	(4, "Monitor",7),
+-- 	(5, "Printer",3);
+-- 
+-- INSERT INTO shipment (shipment_id, product, quantity) VALUES
+-- 	(1, "Laptop",5),
+-- 	(2, "Keyboard",8),
+-- 	(3, "Mouse",15),
+-- 	(4, "Monitor",3),
+-- 	(5, "Headphone",6);
+-- 	
+-- SELECT product, quantity
+-- FROM orders
+-- INTERSECT
+-- SELECT product, quantity
+-- FROM shipments
+
+SELECT product
+FROM shipments
+EXCEPT
+SELECT product
+FROM orders

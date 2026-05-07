@@ -1,0 +1,15 @@
+-- UPDATE employees
+-- SET first_name = "Born"
+-- WHERE employee_id=121
+
+
+-- DELETE FROM employees
+-- WHERE employee_id=121
+
+
+-- DROP TABLE regions
+
+
+SELECT job_id, count(*) as xodim_soni FROM employees
+GROUP by job_id
+HAVING job_id>10
